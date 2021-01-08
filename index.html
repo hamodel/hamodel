@@ -23,6 +23,9 @@
 
   <body>
     <h1>Ha Model !</h1>
+    <h2 style="text-align: right;">
+      <a style="color: white;" href="index.html">Demo 1</a> &nbsp; <a style="color: white;" href="demo2.html">Demo 2</a>
+    </h2>
     <p>Coding... play frontend script with beautiful models~~</p>
     <p>
       <amp-ad width="100vw" height="320" type="adsense" data-ad-client="ca-pub-6899248995924234" data-ad-slot="3653921357"
@@ -105,6 +108,202 @@
     </div>
     
     <div class="clear"></div>
+
+    <p>Click to view the girl, you can find the source code below.</p>
+    
+    <h3>HTML Code:</h3>
+    <pre class="homodel xml">
+      <span class="homodel-comment">&lt;!-- The gallery container: --&gt;</span>
+      <span class="homodel-tag">&lt;<span class="homodel-name">div</span> <span class="homodel-attr">id</span>=<span class="homodel-string">"gallery"</span>&gt;</span>
+      
+      <span class="homodel-comment">&lt;!-- The droppable share box --&gt;</span>
+      <span class="homodel-tag">&lt;<span class="homodel-name">div</span> <span class="homodel-attr">class</span>=<span class="homodel-string">"drop-box"</span>&gt;</span>
+      <span class="homodel-tag">&lt;/<span class="homodel-name">div</span>&gt;</span>
+      
+      <span class="homodel-tag">&lt;/<span class="homodel-name">div</span>&gt;</span>
+      
+      <span class="homodel-tag">&lt;<span class="homodel-name">div</span> <span class="homodel-attr">class</span>=<span class="homodel-string">"clear"</span>&gt;</span><span class="homodel-tag">&lt;/<span class="homodel-name">div</span>&gt;</span>
+      
+      <span class="homodel-comment">&lt;!-- This is later converted to the modal window with the url of the image: --&gt;</span>
+      <span class="homodel-tag">&lt;<span class="homodel-name">div</span> <span class="homodel-attr">id</span>=<span class="homodel-string">"modal"</span> <span class="homodel-attr">title</span>=<span class="homodel-string">"Share this picture"</span>&gt;</span>
+      <span class="homodel-tag">&lt;<span class="homodel-name">form</span>&gt;</span>
+      <span class="homodel-tag">&lt;<span class="homodel-name">fieldset</span>&gt;</span>
+      <span class="homodel-tag">&lt;<span class="homodel-name">label</span> <span class="homodel-attr">for</span>=<span class="homodel-string">"name"</span>&gt;</span>URL of the image<span class="homodel-tag">&lt;/<span class="homodel-name">label</span>&gt;</span>
+      <span class="homodel-tag">&lt;<span class="homodel-name">input</span> <span class="homodel-attr">type</span>=<span class="homodel-string">"text"</span> <span class="homodel-attr">name</span>=<span class="homodel-string">"url"</span> <span class="homodel-attr">id</span>=<span class="homodel-string">"url"</span> <span class="homodel-attr">onfocus</span>=<span class="homodel-string">"this.select()"</span> /&gt;</span>
+      <span class="homodel-tag">&lt;/<span class="homodel-name">fieldset</span>&gt;</span>
+      <span class="homodel-tag">&lt;/<span class="homodel-name">form</span>&gt;</span>
+      
+      <span class="homodel-tag">&lt;/<span class="homodel-name">div</span>&gt;</span>
+    </pre>
+    <h3>CSS Code:</h3>
+    <pre class="hamodel css">
+      <span class="hamodel-selector-tag">body</span>{
+          <span class="hamodel-comment">/* Styling the body */</span>
+          <span class="hamodel-attribute">color</span>:white;
+          <span class="hamodel-attribute">font-size</span>:<span class="hamodel-number">13px</span>;
+          <span class="hamodel-attribute">background</span>: <span class="hamodel-number">#222222</span>;
+          <span class="hamodel-attribute">font-family</span>:Arial, Helvetica, sans-serif;
+      }
+      
+      <span class="hamodel-selector-id">#gallery</span>{
+          <span class="hamodel-comment">/* The pics container */</span>
+          <span class="hamodel-attribute">width</span>:<span class="hamodel-number">100%</span>;
+          <span class="hamodel-attribute">height</span>:<span class="hamodel-number">580px</span>;
+          <span class="hamodel-attribute">position</span>:relative;
+      }
+      
+      <span class="hamodel-selector-class">.pic</span>, <span class="hamodel-selector-class">.pic</span> <span class="hamodel-selector-tag">a</span>{
+          <span class="hamodel-comment">/* Each picture and the hyperlink inside it */</span>
+          <span class="hamodel-attribute">width</span>:<span class="hamodel-number">100px</span>;
+          <span class="hamodel-attribute">height</span>:<span class="hamodel-number">100px</span>;
+          <span class="hamodel-attribute">overflow</span>:hidden;
+      }
+      
+      <span class="hamodel-selector-class">.pic</span>{
+          <span class="hamodel-comment">/* Styles specific to the pic class */</span>
+          <span class="hamodel-attribute">position</span>:absolute;
+          <span class="hamodel-attribute">border</span>:<span class="hamodel-number">5px</span> solid <span class="hamodel-number">#EEEEEE</span>;
+          <span class="hamodel-attribute">border-bottom</span>:<span class="hamodel-number">18px</span> solid <span class="hamodel-number">#eeeeee</span>;
+      
+          <span class="hamodel-comment">/* CSS3 Box Shadow */</span>
+          <span class="hamodel-attribute">-moz-box-shadow</span>:<span class="hamodel-number">2px</span> <span class="hamodel-number">2px</span> <span class="hamodel-number">3px</span> <span class="hamodel-number">#333333</span>;
+          <span class="hamodel-attribute">-webkit-box-shadow</span>:<span class="hamodel-number">2px</span> <span class="hamodel-number">2px</span> <span class="hamodel-number">3px</span> <span class="hamodel-number">#333333</span>;
+          <span class="hamodel-attribute">box-shadow</span>:<span class="hamodel-number">2px</span> <span class="hamodel-number">2px</span> <span class="hamodel-number">3px</span> <span class="hamodel-number">#333333</span>;
+      }
+      
+      <span class="hamodel-selector-class">.pic</span> <span class="hamodel-selector-tag">a</span>{
+          <span class="hamodel-comment">/* Specific styles for the hyperlinks */</span>
+          <span class="hamodel-attribute">text-indent</span>:-<span class="hamodel-number">999px</span>;
+          <span class="hamodel-attribute">display</span>:block;
+          <span class="hamodel-comment">/* Setting display to block enables advanced styling for links */</span>
+      }
+      
+      <span class="hamodel-selector-class">.drop-box</span>{
+          <span class="hamodel-comment">/* The share box */</span>
+          <span class="hamodel-attribute">width</span>:<span class="hamodel-number">240px</span>;
+          <span class="hamodel-attribute">height</span>:<span class="hamodel-number">130px</span>;
+          <span class="hamodel-attribute">position</span>:absolute;
+          <span class="hamodel-attribute">bottom</span>:<span class="hamodel-number">0</span>;
+          <span class="hamodel-attribute">right</span>:<span class="hamodel-number">0</span>;
+          <span class="hamodel-attribute">z-index</span>:-<span class="hamodel-number">1</span>;
+      
+          <span class="hamodel-attribute">background</span>:<span class="hamodel-built_in">url</span>(img/drop_box.png) no-repeat;
+      }
+      
+      <span class="hamodel-selector-class">.drop-box</span><span class="hamodel-selector-class">.active</span>{
+          <span class="hamodel-comment">/* The active style is in effect when there is a pic hovering above the box */</span>
+          <span class="hamodel-attribute">background-position</span>:bottom left;
+      }
+      
+      <span class="hamodel-selector-tag">label</span>, <span class="hamodel-selector-tag">input</span>{
+          <span class="hamodel-comment">/* The modal dialog URL field */</span>
+          <span class="hamodel-attribute">display</span>:block;
+          <span class="hamodel-attribute">padding</span>:<span class="hamodel-number">3px</span>;
+      }
+      
+      <span class="hamodel-selector-tag">label</span>{
+          <span class="hamodel-attribute">font-size</span>:<span class="hamodel-number">10px</span>;
+      }
+      
+      <span class="hamodel-selector-tag">fieldset</span>{
+          <span class="hamodel-attribute">border</span>:<span class="hamodel-number">0</span>;
+          <span class="hamodel-attribute">margin-top</span>:<span class="hamodel-number">10px</span>;
+      }
+      
+      <span class="hamodel-selector-id">#url</span>{
+          <span class="hamodel-comment">/* The URL field */</span>
+          <span class="hamodel-attribute">width</span>:<span class="hamodel-number">240px</span>;
+      }
+    </pre>
+
+    <h3>JavaScript Code:</h3>
+    <pre class="hamodel javascript">
+      $(<span class="hamodel-built_in">document</span>).ready(<span class="hamodel-function"><span class="hamodel-keyword">function</span>(<span class="hamodel-params"></span>)</span>{
+          <span class="hamodel-comment">// Executed once all the page elements are loaded</span>
+          <span class="hamodel-keyword">var</span> preventClick=<span class="hamodel-literal">false</span>;
+          $(<span class="hamodel-string">".pic a"</span>).bind(<span class="hamodel-string">"click"</span>,<span class="hamodel-function"><span class="hamodel-keyword">function</span>(<span class="hamodel-params">e</span>)</span>{
+      
+              <span class="hamodel-comment">/* This function stops the drag from firing a click event and showing the lightbox */</span>
+              <span class="hamodel-keyword">if</span>(preventClick)
+              {
+                  e.stopImmediatePropagation();
+                  e.preventDefault();
+              }
+          });
+      
+          $(<span class="hamodel-string">".pic"</span>).draggable({
+      
+              <span class="hamodel-comment">/* Converting the images into draggable objects */</span>
+              containment: <span class="hamodel-string">'parent'</span>,
+              <span class="hamodel-attr">start</span>: <span class="hamodel-function"><span class="hamodel-keyword">function</span>(<span class="hamodel-params">e,ui</span>)</span>{
+                  <span class="hamodel-comment">/* This will stop clicks from occuring while dragging */</span>
+                  preventClick=<span class="hamodel-literal">true</span>;
+              },
+              <span class="hamodel-attr">stop</span>: <span class="hamodel-function"><span class="hamodel-keyword">function</span>(<span class="hamodel-params">e, ui</span>) </span>{
+                  <span class="hamodel-comment">/* Wait for 250 milliseconds before re-enabling the clicks */</span>
+                  setTimeout(<span class="hamodel-function"><span class="hamodel-keyword">function</span>(<span class="hamodel-params"></span>)</span>{ preventClick=<span class="hamodel-literal">false</span>; }, <span class="hamodel-number">250</span>);
+              }
+          });
+      
+          $(<span class="hamodel-string">'.pic'</span>).mousedown(<span class="hamodel-function"><span class="hamodel-keyword">function</span>(<span class="hamodel-params">e</span>)</span>{
+              <span class="hamodel-comment">/* Executed on image click */</span>
+              <span class="hamodel-keyword">var</span> maxZ = <span class="hamodel-number">0</span>;
+      
+              <span class="hamodel-comment">/* Find the max z-index property: */</span>
+              $(<span class="hamodel-string">'.pic'</span>).each(<span class="hamodel-function"><span class="hamodel-keyword">function</span>(<span class="hamodel-params"></span>)</span>{
+                  <span class="hamodel-keyword">var</span> thisZ = <span class="hamodel-built_in">parseInt</span>($(<span class="hamodel-keyword">this</span>).css(<span class="hamodel-string">'zIndex'</span>))
+                  <span class="hamodel-keyword">if</span>(thisZ&gt;maxZ) maxZ=thisZ;
+              });
+      
+              <span class="hamodel-comment">/* Clicks can occur in the picture container (with class pic) and in the link inside it */</span>
+              <span class="hamodel-keyword">if</span>($(e.target).hasClass(<span class="hamodel-string">"pic"</span>))
+              {
+                  <span class="hamodel-comment">/* Show the clicked image on top of all the others: */</span>
+                  $(e.target).css({<span class="hamodel-attr">zIndex</span>:maxZ+<span class="hamodel-number">1</span>});
+              }
+              <span class="hamodel-keyword">else</span> $(e.target).closest(<span class="hamodel-string">'.pic'</span>).css({<span class="hamodel-attr">zIndex</span>:maxZ+<span class="hamodel-number">1</span>});
+          });
+      
+          <span class="hamodel-comment">/* Converting all the links to a fancybox gallery */</span>
+          $(<span class="hamodel-string">"a.fancybox"</span>).fancybox({
+              <span class="hamodel-attr">zoomSpeedIn</span>: <span class="hamodel-number">300</span>,
+              <span class="hamodel-attr">zoomSpeedOut</span>: <span class="hamodel-number">300</span>,
+              <span class="hamodel-attr">overlayShow</span>:<span class="hamodel-literal">false</span>
+          });
+      
+          <span class="hamodel-comment">/* Converting the share box into a droppable: */</span>
+          $(<span class="hamodel-string">'.drop-box'</span>).droppable({
+              <span class="hamodel-attr">hoverClass</span>: <span class="hamodel-string">'active'</span>,
+              <span class="hamodel-attr">drop</span>:<span class="hamodel-function"><span class="hamodel-keyword">function</span>(<span class="hamodel-params">event,ui</span>)</span>{
+      
+                  <span class="hamodel-comment">/* Fill the URL text field with the URL of the image. */</span>
+                  <span class="hamodel-comment">/* The id of the image is appended as a hash #pic-123 */</span>
+                  $(<span class="hamodel-string">'#url'</span>).val(location.href.replace(location.hash,<span class="hamodel-string">''</span>)+<span class="hamodel-string">'#'</span> + ui.draggable.attr(<span class="hamodel-string">'id'</span>));
+                  $(<span class="hamodel-string">'#modal'</span>).dialog(<span class="hamodel-string">'open'</span>);
+              }
+          });
+      
+          <span class="hamodel-comment">/* Converts the div with id="modal" into a modal window  */</span>
+          $(<span class="hamodel-string">"#modal"</span>).dialog({
+              <span class="hamodel-attr">bgiframe</span>: <span class="hamodel-literal">true</span>,
+              <span class="hamodel-attr">modal</span>: <span class="hamodel-literal">true</span>,
+              <span class="hamodel-attr">autoOpen</span>:<span class="hamodel-literal">false</span>,
+      
+              <span class="hamodel-attr">buttons</span>: {
+                  <span class="hamodel-attr">Ok</span>: <span class="hamodel-function"><span class="hamodel-keyword">function</span>(<span class="hamodel-params"></span>) </span>{
+                      $(<span class="hamodel-keyword">this</span>).dialog(<span class="hamodel-string">'close'</span>);
+                  }
+              }
+          });
+      
+          <span class="hamodel-keyword">if</span>(location.hash.indexOf(<span class="hamodel-string">'#pic-'</span>)!=<span class="hamodel-number">-1</span>)
+          {
+              <span class="hamodel-comment">/* Checks whether a hash is present in the URL */</span>
+              <span class="hamodel-comment">/* and shows the respective image */</span>
+              $(location.hash+<span class="hamodel-string">' a.fancybox'</span>).click();
+          }
+      });
+    </pre>
     
     <!-- This is later converted to the modal window with the url of the image: -->
     <div id="modal" title="Share this picture">
@@ -118,7 +317,7 @@
     </div>
 
     <!-- Optional JavaScript -->
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-1.6.1.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.fancybox.min.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
